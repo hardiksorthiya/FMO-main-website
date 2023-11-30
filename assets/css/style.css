@@ -7435,8 +7435,8 @@ section.intro-about.section-margin .row {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
+  /* -webkit-filter: blur(3px);
+  filter: blur(3px); */
 }
 
 .our-team .team-item:hover .box-content h4 {
