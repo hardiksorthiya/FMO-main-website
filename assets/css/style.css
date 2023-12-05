@@ -12667,7 +12667,9 @@ ul.key-feature-prod li {
   line-height: 2;
   color: white;
 }
-
+.privacy_content p{
+  color: white !important;
+}
 
 
 
@@ -12695,3 +12697,5 @@ ul.key-feature-prod li {
     transform: rotatex(0deg)   rotatey(0deg)   rotatez(0deg)  scale(1); 
   }
 }
+
+
