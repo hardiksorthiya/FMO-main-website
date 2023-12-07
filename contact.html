@@ -20,7 +20,7 @@
 
   <link rel="shortcut icon" href="assets/img/logo.png"  />
   <link rel="icon" href="assets/img/logo.png"  />
-
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <!-- custom styles (optional) -->
   <link href="assets/css/plugins.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
@@ -179,7 +179,7 @@
               <div class="col-lg-6">
                 <div class="form-box">
                   <h3>Write A Comment</h3>
-                  <form  class="form" method="post" action="" data-toggle="validator">
+                  <form   action="" data-toggle="validator">
                     <div class="messages"></div>
                     <div class="input__wrap controls">
                       <div class="form-group">
@@ -235,6 +235,33 @@
                       </div>
                     </div>
                   </form>
+                  
+  
+  <script>
+    function sendEmail(){
+
+      let name = document.getElementById("form_name").value;
+      let email = document.getElementById("form_email").value;
+      let phone = document.getElementById("form_phone").value;
+      let message = document.getElementById("form_message").value;
+      let subject = document.getElementById("form_subject").value;
+
+      let body = "Name:" + name + "<br/>Email" + email + "<br/>Phone Number:" + phone + "<br/>Subject:" + subject + "<br/>Message:" + message;
+
+      Email.send({
+    SecureToken : "e43fcb54-c035-4e79-aca1-26ceaeb4d598",
+    To : 'findmeout24@gmail.com',
+    From : "findmeout24@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+      
+}
+  </script>
+  
                 </div>
               </div>
             </div>
@@ -356,34 +383,6 @@
 
 
 
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  
-  <script>
-    function sendEmail(){
-
-      let name = document.getElementById("form_name").value;
-      let email = document.getElementById("form_email").value;
-      let phone = document.getElementById("form_phone").value;
-      let message = document.getElementById("form_message").value;
-      let subject = document.getElementById("form_subject").value;
-
-      let body = "Name:" + name + "<br/>Email" + email + "<br/>Phone Number:" + phone + "<br/>Subject:" + subject + "<br/>Message:" + message;
-
-
-
-      Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "findmeout24@gmail.com",
-    Password : "E1831AD6918BBACFB95559A1A9683B1E6352",
-    To : 'findmeout24@gmail.com',
-    From : "findmeout24@gmail.com",
-    Subject : "Message From" .name ,
-    Body : body
-}).then(
-  message => alert(message)
-);
-}
-  </script>
   
   
   
