@@ -12670,7 +12670,12 @@ ul.key-feature-prod li {
 .privacy_content p{
   color: white !important;
 }
-
+.footer .copyright .text-start a {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 12px;
+  padding-left: 12px;
+}
 
 
 /* animation */
